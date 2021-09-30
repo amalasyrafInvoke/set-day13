@@ -106,7 +106,7 @@ function sendMessage() {
   var nameValue = localStorage.getItem('username');
 
   var date = new Date();
-  var mydate = date.toISOString().substr(0, 9).replaceAll('-', '/');
+  var mydate = date.toISOString().substr(0, 10).replaceAll('-', '/');
   var mytime = date.toLocaleTimeString('en-US', { hour12: true });
 
   if (messageInput.value === '') {
