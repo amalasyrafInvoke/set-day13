@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form {
+  text-align: center;
+  margin: 1.2rem 0;
+}
+
+#container {
+  width: 900px;
+  height: 600px;
+  margin: 0 auto;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-list {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.item-list > * {
+  margin: 0 15px;
+}
+
+#total {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

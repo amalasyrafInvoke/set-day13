@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatroom</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/chatroom.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="app-holder">
+        <div id="theLogin" class="container">
+          <!-- <h1>Login Page</h1> -->
+          <div id="login-panel" class="panel">
+            <div>
+              <h1>Welcome to Kedai Mamak</h1>
+              <p>A place to hang out and chat with friends and others</p>
+              <p>Just like your favorite local mamak restaurant</p>
+            </div>
+            <div id="login">
+              <h1>
+                TO GET STARTED, <br />
+                ENTER YOUR USERNAME
+              </h1>
+              <input type="text" name="username" id="username-input" />
+              <div id="login-btn">
+                <h3 onclick="enterRoomList()">ENTER</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="theRoomList" class="container">
+          <div id="roomlist-panel" class="panel">
+            <div id="roomlist-header">
+              <i class="fa fa-arrow-left" onclick="moveToLogin()"></i>
+              <h1>Room List</h1>
+              <i class="fa fa-plus" onclick="createNewRoom()"></i>
+            </div>
+            <div id="roomlist-list"></div>
+          </div>
+        </div>
+        <div id="theRoom" class="container">
+          <div id="roomlist-header">
+            <i class="fa fa-arrow-left" onclick="backToRoomList()"></i>
+            <h1>Chat Room /Chatroom Name/</h1>
+          </div>
+          <div id="chat-room"></div>
+          <div id="chat-input">
+            <div id="your-name-input"></div>
+            <div id="input-holder">
+              <input type="text" name="message" id="message-input" />
+            </div>
+
+            <button onclick="sendMessage()">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-database.js"></script>
+    <script src="js/chatroom.js"></script>
+  </body>
+</html>
