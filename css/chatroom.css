@@ -198,3 +198,12 @@ html, body {
   border-radius: 10px;
 }
 
+.fa:hover {
+  /* box-shadow: -1px 1px 15px rgba(0, 0, 0, 0.25); */
+  font-size: 1.5rem;
+}
+
+.fa {
+  transition: 0.45s all;
+}
+

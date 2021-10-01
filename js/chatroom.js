@@ -116,19 +116,28 @@ function sendMessage() {
 
   //push the data and store in DB
   db.ref('chatlist')
-    .child(localStorage.getItem('roomID'))
-    .child('message')
-    .push({
-      name: nameValue,
-      msg: messageInput.value,
-      date: mydate,
-      time: mytime,
-    });
+  .child(localStorage.getItem('roomID'))
+  .child('message')
+  .push({
+    name: nameValue,
+    msg: messageInput.value,
+    date: mydate,
+    time: mytime,
+  });
+  messageInput.value = '';
 }
 
 function enterRoomList() {
-  appHolder.style.transform = 'translateX(-100vw)';
   var usernameInput = document.getElementById('username-input');
+
+  if (usernameInput.value === '') {
+    window.alert('Please Enter A Username To Continue');
+    return;
+  }
+
+  roomList.scrollTo(0,0);
+
+  appHolder.style.transform = 'translateX(-100vw)';
 
   window.localStorage.setItem('username', usernameInput.value);
 }
